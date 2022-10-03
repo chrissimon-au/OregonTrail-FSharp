@@ -8,9 +8,10 @@ open FsUnit
 open FsUnit.Xunit
 
 [<Fact>]
-let given_it_is_the_beginning_of_the_game_then_the_user_is_prompted_to_request_instructions () = 
-    let newTurn = TurnMaker.makeNextTurn GameState.startingState String.Empty
-    newTurn |> should equal
+let given_it_is_the_beginning_of_the_game_then_the_user_is_prompted_to_request_instructions () =  
+    GameState.startingState
+    |> TurnMaker.makeNextTurn String.Empty
+    |> should equal
         {
             IsGameFinished = false
             Request = Request.DoYouRequireInstruction
@@ -27,11 +28,9 @@ let given_it_is_the_beginning_of_the_game_then_the_user_is_prompted_to_request_i
 [<InlineData("YES")>]
 // [<InlineData("YeS")>]
 let given_the_user_wants_instructions_then_the_instructions_are_displayed (yesStatement) = 
-    let newTurn =
-        TurnMaker.makeNextTurn
-            { GameState.startingState with Request = Request.DoYouRequireInstruction } 
-            yesStatement
-    newTurn |> should equal
+    { GameState.startingState with Request = Request.DoYouRequireInstruction }
+    |> TurnMaker.makeNextTurn yesStatement
+    |> should equal
         {
             TurnNumber = 2
             IsGameFinished = false
@@ -86,12 +85,10 @@ let given_the_user_wants_instructions_then_the_instructions_are_displayed (yesSt
         }
 
 [<Fact>]
-let g () =
-    let newTurn =
-        TurnMaker.makeNextTurn
-            { GameState.startingState with Request = Request.DoYouRequireInstruction }
-            "no"
-    newTurn |> should equal
+let given_the_user_does_not_want_instructions_then_the_instructions_are_not_displayed () =
+    { GameState.startingState with Request = Request.DoYouRequireInstruction }
+    |> TurnMaker.makeNextTurn "no"
+    |> should equal
         {
             IsGameFinished = false
             Request = Request.HowMuchSpendOnOxen

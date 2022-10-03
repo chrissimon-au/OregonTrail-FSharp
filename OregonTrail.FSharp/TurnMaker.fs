@@ -3,7 +3,7 @@
 open OregonTrail.FSharp.GameState
 open System
 
-let makeNextTurn state (input: String) =
+let makeNextTurn (input: String) state =
     let returnValue =
         match state.Request with
         | Request.StartGame ->
