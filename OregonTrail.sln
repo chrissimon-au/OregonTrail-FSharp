@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OregonTrail", "OregonTrail\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OregonTrail.Tests", "OregonTrail.Tests\OregonTrail.Tests.csproj", "{D8C1F1F1-A95A-4699-A708-BA0FDC6CAF20}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OregonTrail.FSharp", "OregonTrail.FSharp\OregonTrail.FSharp.fsproj", "{A461873B-D87F-480C-AB28-2F8016C5E1E8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OregonTrail.FSharp.Tests", "OregonTrail.FSharp.Tests\OregonTrail.FSharp.Tests.fsproj", "{0460ABE6-2432-4F67-A8F0-C910E621155A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D8C1F1F1-A95A-4699-A708-BA0FDC6CAF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8C1F1F1-A95A-4699-A708-BA0FDC6CAF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C1F1F1-A95A-4699-A708-BA0FDC6CAF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A461873B-D87F-480C-AB28-2F8016C5E1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A461873B-D87F-480C-AB28-2F8016C5E1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A461873B-D87F-480C-AB28-2F8016C5E1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A461873B-D87F-480C-AB28-2F8016C5E1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0460ABE6-2432-4F67-A8F0-C910E621155A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0460ABE6-2432-4F67-A8F0-C910E621155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0460ABE6-2432-4F67-A8F0-C910E621155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0460ABE6-2432-4F67-A8F0-C910E621155A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
